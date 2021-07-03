@@ -5,6 +5,21 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  argTypes: {
+    size: {
+      options: ["tiny", "small", "medium", "large"],
+      control: { type: "radio" },
+    },
+  },
+};
+
+const Template = (args) => <Avatar {...args} />;
+
+export const Controls = Template.bind({});
+Controls.args = {
+  loading: false,
+  username: "Dominic Nguyen",
+  src: "https://avatars2.githubusercontent.com/u/263385",
 };
 
 export const Standard = (args) => <Avatar {...args} />;
